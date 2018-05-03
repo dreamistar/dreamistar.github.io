@@ -45,12 +45,13 @@ use_math: true
 ###이해가 빠를 것 같다. 
 ###### 장담은 못하겠다. 
 
-1. $$$N(t)$$$ : time t에 queueing system에 있는 사람의 수
-2. $$$P_n(t)$$$ : time t에 queueing system에 n명의 사람이 있을 확률
-3. $$$s$$$ : server의 수 
-4. $$$\lambda$$$ : 단위시간 당 도착하는 고객의 평균 수 
-5. $$$\mu$$$ : 단위시간 당 떠나는 고객의 평균 수 
-6. $$$L$$$ : queueing system 안에 있는 고객 수의 기대값 : $$$\sum_{n=0}^{\infty}$$$
+1. $$N(t)$$ : time t에 queueing system에 있는 사람의 수
+2. $$P_n(t)$$ : time t에 queueing system에 n명의 사람이 있을 확률
+3. $$s$$ : server의 수 
+4. $$\lambda$$ : 단위시간 당 도착하는 고객의 평균 수 
+5. $$\mu$$ : 단위시간 당 떠나는 고객의 평균 수 
+6. $$L$$ : queueing system 안에 있는 고객 수의 기대값 : $$\sum_{n=0}^{\infty}{nP_n}$$
+7. 
 
 
 
