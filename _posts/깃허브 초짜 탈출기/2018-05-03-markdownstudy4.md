@@ -15,3 +15,4 @@ categories: Github초짜탈출기
 ![슬기](./assets/sulgi/sulgi1.jpg)
 ![슬기](url 주소) 로도 가능하다. 
 ```
+![슬기](http://socdn.smtown.com/upload/mf/gallery/images/2018/01/29/o_1c509jj82opd1qg31bla1fr1jjl1v.jpg)
