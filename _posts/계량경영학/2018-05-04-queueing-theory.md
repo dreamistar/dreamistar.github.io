@@ -39,6 +39,8 @@ use_math: true
 #### Queue란 한국어로 대기열과 비슷한 말이고,  
 #### 이를 수학적으로 다루는 이론이 바로 Queueing Theory이다.  
 
+![queue_basic](./_img/queueing_theory/queue_basic.PNG)
+
 # 1. Notation 
 
 ###무엇보다도 먼저 Notation을 살펴보면, 
@@ -51,7 +53,19 @@ use_math: true
 4. $$\lambda$$ : 단위시간 당 도착하는 고객의 평균 수 
 5. $$\mu$$ : 단위시간 당 떠나는 고객의 평균 수 
 6. $$L$$ : queueing system 안에 있는 고객 수의 기대값 : $$\sum_{n=0}^{\infty}{nP_n}$$
-7. 
+7. $$L_q$$ : 서비스를 받고 있는 고객들을 제외한, 기다리고 있는 사람(in queue / queue length) : $$\sum_{n=0}^{\infty}{(n-s)P_n}$$
+8. $$W$$ : 한 고객이 시스템 안에서 기다리는 시간의 기대값 
+9. $$W_q$$ : 한 고객이 queue안에서 기다리는 시간의 기대값
+10. $$\rho = \lambda/s\mu$$ : 시스템 이용률 도착
+
+#### 으 아직 모르겠다. 
+
+# 2. Little's Law 
+#### 이 하나의 법칙으로 평생을 잘 먹고 잘 산 Little님의 Law이다. 
+#### 간단하다. 
+1. $$ L = \lambda W$$
+2. $$ L_q = \lambda W_q$$
+3. $$ W = W_q + 1/\mu $$
 
 
 
