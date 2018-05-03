@@ -9,7 +9,7 @@ tags: [markdown, image]
 #### 이미지를 넣어보자
 #### 이미지는 당연히 내가 좋아하는 사진을 넣을꺼다. 
 #### 바로, 
-![Seulgi](./seulgi1.jpg)  
+![Seulgi](./seulgi1.JPG)  
 
 
 ![Seulgi](http://socdn.smtown.com/upload/mf/gallery/images/2018/01/29/o_1c509jj82opd1qg31bla1fr1jjl1v.jpg)
