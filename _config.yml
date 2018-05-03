@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "기햄 공부저장소"
+title                    : "Storage of Study"
 title_separator          : "-"
-name                     : "윤기혁"
-description              : "공부한걸 저장하자"
+name                     : "Kihyuk Yoon"
+description              : "What I studied"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -97,10 +97,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "윤기혁"
+  name             : "Kihyuk Yoon"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "UNIST 경영공학부"
-  location         : "울산/용인"
+  bio              : "Hi there"
+  location         : "Ulsan"
   email            :
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
