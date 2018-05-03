@@ -8,7 +8,9 @@ categories: Github초짜탈출기
 #### 이미지를 넣어보자
 #### 이미지는 당연히 내가 좋아하는 사진을 넣을꺼다. 
 #### 바로, 
-![Seulgi](dreamistar.github.io/_img/seulgi/seulgi1.jpg)
+![Seulgi](dreamistar.github.io/_img/seulgi/seulgi1.jpg)  
+
+
 ![Seulgi](http://socdn.smtown.com/upload/mf/gallery/images/2018/01/29/o_1c509jj82opd1qg31bla1fr1jjl1v.jpg)
 #### 슬기이다. 
 #### 이미지를 넣는 방법은 다음과 같다. 
