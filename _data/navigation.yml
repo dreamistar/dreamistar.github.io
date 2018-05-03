@@ -12,3 +12,5 @@ main:
      url: /sitemap/
    - title: "Categories"
      url: /categories-archive/
+   - title: "Tags"
+     url: /tag-archive/

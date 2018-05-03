@@ -2,6 +2,7 @@
 layout: posts
 title: 마크다운을 공부해보자_01. Markdown의 기본
 categories: Github초짜탈출기
+tags: [markdown, basic]
 ---
 # 0. Markdown이란? 
 #### 기본적으로 Github 블로그 글을 쓸 때는 markdown을 활용한다. 

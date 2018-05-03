@@ -3,6 +3,7 @@ layout: posts
 title: 마크다운을 공부해보자_03. LaTex 적용하기 
 categories: Github초짜탈출기
 use_math: true
+tags: [markdown, Latex]
 ---
 
 # 0. Latex란? 

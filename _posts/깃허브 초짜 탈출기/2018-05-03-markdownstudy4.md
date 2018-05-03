@@ -2,6 +2,7 @@
 layout: posts
 title: 마크다운을 공부해보자_02. Markdown으로 이미지 넣기 
 categories: Github초짜탈출기
+tags: [markdown, image]
 ---
 
 # 1. 이미지 넣기 
