@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: 마크다운을 공부해보자_03. Markdown으로 이미지 넣기 
+title: 마크다운을 공부해보자_02. Markdown으로 이미지 넣기 
 categories: Github초짜탈출기
 ---
 

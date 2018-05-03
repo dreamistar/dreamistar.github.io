@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: 마크다운을 공부해보자_03. Markdown의 기본_1  
+title: 마크다운을 공부해보자_01. Markdown의 기본
 categories: Github초짜탈출기
 ---
 # 0. Markdown이란? 
