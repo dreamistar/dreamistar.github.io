@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Github에 코드 넣기"
 categories: "Github초짜탈출기"
 ---

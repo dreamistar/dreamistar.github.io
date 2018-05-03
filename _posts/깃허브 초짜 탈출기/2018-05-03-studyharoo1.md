@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: 하루패드를 공부해보자 _ 01
 categories: Github초짜탈출기
 use_math: true
@@ -62,4 +62,3 @@ $$
 위의 식은 
 3^x + \sqrt{3x+1} + (1+x)^x + x_1 + \sigma
 라고 썼을 때의 결과물이다. 
-
