@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: 하루패드를 공부해보자 _ 01
+title: 하루패드를 공부해보자_01
 categories: Github초짜탈출기
 use_math: true
 ---
