@@ -41,14 +41,14 @@ use_math: true
 #### Queue란 한국어로 대기열과 비슷한 말이고,  
 #### 이를 수학적으로 다루는 이론이 바로 Queueing Theory이다.  
 
-![queue_basic](./queue_basic.JPG)
+![queue_basic](https://github.com/dreamistar/dreamistar.github.io/blob/master/_posts/%EA%B3%84%EB%9F%89%EA%B2%BD%EC%98%81%ED%95%99/queue_basic.JPG)
 
 ---
 
 # 1. Notation 
 
-###무엇보다도 먼저 Notation을 살펴보면, 
-###이해가 빠를 것 같다. 
+### 무엇보다도 먼저 Notation을 살펴보면, 
+### 이해가 빠를 것 같다. 
 ###### 장담은 못하겠다. 
 
 1. $$N(t)$$ : time t에 queueing system에 있는 사람의 수
