@@ -41,7 +41,7 @@ use_math: true
 #### Queue란 한국어로 대기열과 비슷한 말이고,  
 #### 이를 수학적으로 다루는 이론이 바로 Queueing Theory이다.  
 
-![queue_basic](./queue_basic.JPG)
+![queue_basic](https://blogfiles.pstatic.net/MjAxODA1MDRfMzkg/MDAxNTI1NDAyODMzMDgz.Brr9zBtX_vEZV7xeuiqiu1VYf-R57tX-yYMAIDYPnZ0g.8lM3_tzAODeKifD1OPYmKs1xMRLwyM5xSZ52njM4EvYg.PNG.dreamistar7/queue_baisc.PNG)
 
 ---
 
@@ -82,6 +82,8 @@ use_math: true
 3. 한 고객이 시스템 안에서 머무르는 시간은 서비스를 받기 전 기다려야 하는 시간과 평균적으로 고객이 서비스를 받는 시간의 합과 같다. 
 
 #### 적고 보니 너무 당연한 이야기다. 
+
+
 
 
 

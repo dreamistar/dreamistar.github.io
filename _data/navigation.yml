@@ -14,5 +14,3 @@ main:
      url: /categories-archive/
    - title: "Tags"
      url: /tag-archive/
-  - title: "Posts by Years"
-    url: /year-archive/
