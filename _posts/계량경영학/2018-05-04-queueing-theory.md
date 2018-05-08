@@ -41,7 +41,7 @@ use_math: true
 #### Queue란 한국어로 대기열과 비슷한 말이고,  
 #### 이를 수학적으로 다루는 이론이 바로 Queueing Theory이다.  
 
-![queue_basic](https://blogfiles.pstatic.net/MjAxODA1MDRfMzkg/MDAxNTI1NDAyODMzMDgz.Brr9zBtX_vEZV7xeuiqiu1VYf-R57tX-yYMAIDYPnZ0g.8lM3_tzAODeKifD1OPYmKs1xMRLwyM5xSZ52njM4EvYg.PNG.dreamistar7/queue_baisc.PNG)
+![queue_basic](https://postfiles.pstatic.net/MjAxODA1MDRfMjY3/MDAxNTI1NDA3ODA5Mjgy.iODbor5N_XZxiFWkbtHgNqkdxdG3hQ4PhkCJDa_F2Zkg.ETBljtM9CH3HJtqsZ78cZ1zBCeYKTL3Pq9culRtkZdsg.JPEG.dreamistar7/queue_basic.JPG?type=w1)
 
 ---
 
