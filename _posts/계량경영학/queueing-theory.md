@@ -1,93 +1,86 @@
 ---
 layout: posts
-title: Queueing Theory 0. Stochastic Process
+title: Queueing Theory 1. Queueing Theory
 categories: 계량경영학
-tag : [queueingTheory, StochasticProcess]
+tag : [queueingTheory]
 use_math: true
 ---
 
-# 1. 확률변수 
-&nbsp;&nbsp;&nbsp;이름은 확률'변수'이지만, 확률변수는 정확히 이야기하면 함수이다. 일정한 확률로 표본공간 내 Event가 일어날 때 이에 대응하는 실수들에 대한 함수가 바로 확률변수이다. 즉, 확률변수는 Event의 표본 공간을 정의역으로 가지며, 실수를 공역으로 가지는 함수이다.  
+# 0. Queueing Theory란 무엇인가
+![queue_basic](https://postfiles.pstatic.net/MjAxODA1MDRfMjY3/MDAxNTI1NDA3ODA5Mjgy.iODbor5N_XZxiFWkbtHgNqkdxdG3hQ4PhkCJDa_F2Zkg.ETBljtM9CH3HJtqsZ78cZ1zBCeYKTL3Pq9culRtkZdsg.JPEG.dreamistar7/queue_basic.JPG?type=w1)
 
-&nbsp;&nbsp;&nbsp;해당 표본공간에서 일어나는 Event들을 잘 이해하기 위해 확률변수를 활용하게 된다. 확률변수는 일반적으로 대문자 X로 나타내며 그 구체적인 값에 대해서는 x로 나타낸다.  
+&nbsp;&nbsp;&nbsp;Queueing Theory는 queue를 수학적으로 다루는 학문으로 고객이 queue에 도착하고, 대기하고, 서비스를 받고 떠나는 일련의 프로세스에 대한 수학적인, 확률적인 분석을 가능하게 한다. 서비스 분야에만 활용되는 것이 아닌 여러가지 분야에 활용이 가능하다. 예를 들어 제조공장에서의 원료를 고객, 기계를 server, 제조를 서비스로 본다면 제조 공장에 또한 queueing theory를 활용할 수 있다.  
 
-&nbsp;&nbsp;&nbsp;예를 들어 주사위를 던지는 것을 생각해보자.  
-&nbsp;&nbsp;&nbsp;이때 나올 수 있는 모든 주사위 눈이 나올 Event는 1, 2, 3, 4, 5, 6 이다. 또한 각 Event의 확률은 1/6으로 동일하다. 각 Event들에 주사위 눈과 동일하게 확률변수를 부여한다면, 다음과 같이 쓸 수 있다.  
+&nbsp;&nbsp;&nbsp;Queueing Theory에는 몇 가지 주요 고려대상이 있다. 
+1. 고객 도착 시간(interarrival time) 사이의 평균 간격, $$\lambda$$
+2. 전체 system에서 고객이 머무르는 시간의 기대값, $$W$$
+3. 서비스에 걸리는 시간의 기대값, $$W-W_q$$
+4. 전체 system에 있는 고객 수의 기대값, $$L$$
+5. \# of Server, $$s$$
+6. 서비스를 받고 떠나는 고객의 평균 수, $$\mu$$  
 
-
-$$
-X(1) = x_1 = 1, P(x_1) = 1/6
-$$
-
-
-$$
-X(2) = x_2 = 2, P(x_2) = 1/6
-$$
-
-
-$$
-....
-$$
-
-
-$$
-X(6) = x_6 = 6, P(x_6) = 1/6
-$$
-
-
-&nbsp;&nbsp;&nbsp;이는 곧 확률변수 X가 동일한 $$1/6$$의 확률로 $x_n$이라는 특정한 값을 가진다는 이야기다.  
-
-
-  확률변수에는 2가지 종류가 있다. 
-  1. 이산확률변수
-    * 위의 주사위 예시처럼 확률변수값이 연속적이지 않고 분리되어 있는 경우
-    * 셀 수 있는 경우 
-  2. 연속확률변수
-    * 위의 주사위 예시와는 다르게 확률변수값이 연속적인 경우 
-    * 셀 수 없는 경우
-
-&nbsp;&nbsp;&nbsp;확률변수에서 중요한 것은 결국 표본공간 내 다소 추상적인 Sample 내지 Event를 구체적인 실수로 표현한다는 것이다. 따라서 Event의 특성을 고려하여 실수로 표현하는 것이 중요하다.  
-
-
-&nbsp;&nbsp;&nbsp;연속확률변수의 예로는 하루동안의 온도가 있다. 하루 동안 온도는 지속적으로 변하지만, 연속적이고 또 특정 온도에서의 확률을 구하는 것, 즉 $X(x_t)$ 가 의미가 없다. 일정기간, ${x_t < X < x_(t+1)}$ 이 의미가 있다. 
+&nbsp;&nbsp;&nbsp;Notation에서 좀더 깊게 살펴보자 
 
 ---
 
-# 2. 누적분포함수(CDF)
-&nbsp;&nbsp;&nbsp;CDF(Cumulative Distribution Function), 즉 누적분포함수는 다음과 같이 정의된다. 
+# 1. Notation 
 
-$$
-F_x(x) = P(X <= x)
-$$
+1. $$N(t)$$ : time t에 queueing system에 있는 사람의 수
+  * 확정된, 특정 시간대에 있는 사람의 수.  
 
-&nbsp;&nbsp;&nbsp;이는 결국 확률변수 X가 $-infty$ 부터 x까지의 값을 가질 확률들을 모두 더한 값으로, 모든 결과를 누적한 값이다.  
-&nbsp;&nbsp;&nbsp;누적분포함수는 다음과 같은 성질을 가진다. 
-  1. $$0 <= F_x(x) <= 1$$
-  2. $$F_x(\infty) = 1$$
-  3. $$F_x(-\infty) = 0 $$
-  4. $$F_x(x_1) <= F_x(x_2) \ \ \ for \ \ \ x_1 < x_2 $$
+2. $$P_n(t)$$ : time t에 queueing system에 n명의 사람이 있을 확률
+  * 확정된, 특정 시간대에 n명의 사람이 있을 확률  
 
-&nbsp;&nbsp;&nbsp;확률을 어느정도 공부한 사람은 눈치챌 수 있겠지만, 확률밀도함수(Probability Density Function, pdf)를 흔히 $$f_x(x)$$ 로 나타내는 것과 연관되어 있는데, CDF를 미분한 함수가 바로 pdf이다. 따라서 연속함수 일때 다음을 만족한다. 
+3. $$s$$ : server의 수  
 
-$$
-P(a < X < b) = F_x(b) - F_x(a) = \int_a^b f_x(x)dx
-$$
+4. $$\lambda$$ : 단위시간 당 도착하는 고객의 평균 수 = 단위시간 당 떠나는 고객의 평균 수 
+  * 고객이 서비스 중간에 죽지 않는다면 input과 output은 동일하다.  
+
+5. $$1/\lambda$$ : 평균적으로 고객이 도착하는 시간 
+  * 쉽게 생각한다면 $$\lambda$$가 $$n/t$$이므로  
+
+5. $$\mu$$ : 단위시간 당 떠나는 고객의 평균 수 
+  * 이 $$\mu$$는 단위시간 당 서비스를 받는 고객의 평균 수와 동일하다. 서비스를 받으면 바로 떠나니까.  
+
+7. $$1/\mu$$ : 평균적으로 고객이 서비스를 받는 시간 
+  * $$\lambda$$와 동일하게 생각해주면 편하다.  
+
+8.  $$L$$ : queueing system 안에 있는 고객 수의 기대값 : $$\sum_{n=0}^{\infty}{nP_n}$$
+  * 기대값임에 유의하자  
+
+9. $$L_q$$ : 서비스를 받고 있는 고객들을 제외한, 기다리고 있는 사람(in queue / queue length) : $$\sum_{n=0}^{\infty}{(n-s)P_n}$$
+  * 서비스를 받고 있는 고객 : $$L-L_q$$  
+
+10. $$W$$ : 한 고객이 시스템 안에서 머무르는 시간의 기대값  
+
+11. $$W_q$$ : 한 고객이 queue안에서 기다리는 시간의 기대값
+  * 서비스를 받는 시간의 기대값 : $$W-W_q$$  
+
+12. $$\rho = \lambda/s\mu$$ : 시스템 이용률 
+
 
 ---
 
-# 3. Stochastic Process
+# 2. Little's Law 
+&nbsp;&nbsp;&nbsp;Little's Law는 위의 notation들을 활용하여 특정 공식들을 정의한 것이다. 
+1. $$ L = \lambda W$$
+  * 전체 system에 있는 고객의 수 = 도착하는 고객의 평균 수 * 고객이 시스템 안에 머무르는 시간의 기대값 
+  * 간단하게 생각했을 때, $$\lambda$$는 n/t이고 W는 t이다.  
 
-&nbsp;&nbsp;&nbsp;Stochastic Process(Random Process)는 위의 확률변수에 시간의 개념이 들어간 것이다. 시간이라는 차원이 들어가게되어 지금까지는 확률변수가 X로 하나밖에 없었다면, Stochastic Process에서는 시간 t마다 $X_t$ 라는 확률변수들이 따로 하나씩 주어지게 되는 것이다.  
+2. $$ L_q = \lambda W_q$$
+  * queue에 있는 고객의 수 = 도착하는 고객의 평균 수 * queue에서 고객이 기다리는 시간의 기대값
+  * 간단하게 생각했을 때, 동일하다.  
 
-&nbsp;&nbsp;&nbsp;좀 더 이해를 돕기 위해 예를 들자면, 흔히 많은 만화 세계관에서 이야기 하는 평행우주를 생각하면 편하다. 평행우주이론은 여러 우주가 존재하고, 내가 살고 있는 우주는 특정 우주이며, 다른 우주에는 다른 내가 존재하고 나와 다른 우주의 나는 완전히 다른 삶을 살고 있다는 것이다. 마블, DC 세계관이나 덴마를 본 사람이라면 쉽게 이해가 가능하다. ~~(그러니 우리는 덴마를 봐야한다)~~  
+3. $$ W = W_q + 1/\mu $$
+  * 한 고객이 시스템 안에서 머무르는 시간 = 기다리는 시간 + 서비스 받는 시간 
 
-&nbsp;&nbsp;&nbsp;특정 시간을 하나의 우주로 생각하면 편하다. 각 우주마다, 즉 시간마다 다른 확률변수들이 존재하는 것이다. 위의 온도를 다시 예로 든다면, 오후 1시의 온도 확률변수와 새벽 1시의 온도 확률변수는 다를 수밖에 없다. 주사위의 예 또한 시간이 많이 지나 점차 모서리가 마모된 주사위라면, 동일한 확률을 가질 수 없다.  
+&nbsp;&nbsp;&nbsp;이를 다르게 표현 할 수도 있는데, 주로 공정과정에 있어서 쓰는 Notation으로 바꿔서 표현 할 수 있다. 
+1. Throughput(TH) : 단위 시간당 생산되는 제품의 수량 = $$\mu$$
+2. Work in Process(WIP) : 전체 system에 있는 inventory = $$L$$
+3. Raw Material Inventory(RMI) : 대기중인 material
+4. Cycle Time(CT) : 전체 system에 걸리는 시간 = $$W$$
 
-&nbsp;&nbsp;&nbsp;특정 시간대의 랜덤프로세스는 다음과 같이 쓴다. $$X_i = X(t_i,s) = X(t_i)$$ 이는 시간 $$t_i$$ 때의 확률변수를 나타낸 것이다. 
-  
-
-
-
+&nbsp;&nbsp;&nbsp;적고 보니 너무 당연한 이야기를 수식으로 나타낸 것 같다. 
 
 
 
