@@ -64,11 +64,17 @@ $$
   3. $$F_x(-\infty) = 0 $$
   4. $$F_x(x_1) <= F_x(x_2) \ \ \ for \ \ \ x_1 < x_2 $$
 
-  확률을 어느정도 공부한 사람은 눈치챌 수 있겠지만, 확률밀도함수(Probability Density Function, pdf)를 흔히 $$f_x(x)$$ 로 나타내는 것과 연관되어 있는데, CDF를 미분한 함수가 바로 pdf이다. 따라서 다음을 만족한다. 
+  확률을 어느정도 공부한 사람은 눈치챌 수 있겠지만, 확률밀도함수(Probability Density Function, pdf)를 흔히 $$f_x(x)$$ 로 나타내는 것과 연관되어 있는데, CDF를 미분한 함수가 바로 pdf이다. 따라서 연속함수 일때 다음을 만족한다. 
 
 $$
 P(x_1 < X < x_2) = F_x(x_1) - F_x(x_2) = \int_(x_1)^(x_2) f_x(x)dx
 $$
+
+
+# 2. Stochastic Process
+
+  Stochastic Process(Random Process)는 위의 확률변수에 시간의 개념이 들어간 것이다. 시간이라는 차원이 들어가게되어 지금까지는 확률변수가 X로 하나밖에 없었다면, Stochastic Process에서는 시간 t마다 $X_t$ 라는 확률변수들이 따로 하나씩 주어지게 되는 것이다.  
+  좀 더 이해를 돕기 위해 예를 들자면, 흔히 많은 만화 세계관에서 이야기 하는 평행우주를 생각하면 편하다. 
 
 
 
