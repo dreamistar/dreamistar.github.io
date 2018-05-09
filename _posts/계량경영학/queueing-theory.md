@@ -19,6 +19,8 @@ use_math: true
 5. \# of Server, $$s$$
 6. 서비스를 받고 떠나는 고객의 평균 수, $$\mu$$  
 
+
+
 &nbsp;&nbsp;&nbsp;Notation에서 좀더 깊게 살펴보자 
 
 ---
@@ -62,7 +64,7 @@ use_math: true
 ---
 
 # 2. Little's Law 
-&nbsp;&nbsp;&nbsp;Little's Law는 위의 notation들을 활용하여 특정 공식들을 정의한 것이다. 
+&nbsp;&nbsp;&nbsp;Little's Law는 위의 notation들을 활용한 것으로, 프로세스가 안정상태에서 재고, 산출율, 그리고 흐름 시간의 상관관계를 나타낸 법칙이다. 
 1. $$ L = \lambda W$$
   * 전체 system에 있는 고객의 수 = 도착하는 고객의 평균 수 * 고객이 시스템 안에 머무르는 시간의 기대값 
   * 간단하게 생각했을 때, $$\lambda$$는 n/t이고 W는 t이다.  
@@ -72,15 +74,21 @@ use_math: true
   * 간단하게 생각했을 때, 동일하다.  
 
 3. $$ W = W_q + 1/\mu $$
-  * 한 고객이 시스템 안에서 머무르는 시간 = 기다리는 시간 + 서비스 받는 시간 
+  * 한 고객이 시스템 안에서 머무르는 시간 = 기다리는 시간 + 서비스 받는 시간  
 
-&nbsp;&nbsp;&nbsp;이를 다르게 표현 할 수도 있는데, 주로 공정과정에 있어서 쓰는 Notation으로 바꿔서 표현 할 수 있다. 
+&nbsp;&nbsp;&nbsp;이를 다르게 표현 할 수도 있는데, 주로 공정과정에 있어서 쓰는 Notation으로 바꿔서 표현 할 수 있다.  
 1. Throughput(TH) : 단위 시간당 생산되는 제품의 수량 = $$\mu$$
 2. Work in Process(WIP) : 전체 system에 있는 inventory = $$L$$
 3. Raw Material Inventory(RMI) : 대기중인 material
 4. Cycle Time(CT) : 전체 system에 걸리는 시간 = $$W$$
 
-&nbsp;&nbsp;&nbsp;적고 보니 너무 당연한 이야기를 수식으로 나타낸 것 같다. 
+&nbsp;&nbsp;&nbsp;$$WIP = TH * CT$$ :  
+&nbsp;&nbsp;&nbsp;전체 system에 있는 inventory = 단위시간당 생산되는 제품의 수량 * 전체 system에 걸리는 시간  
+
+
+
+
+&nbsp;&nbsp;&nbsp;적고 보니 너무 당연한 이야기를 수식으로 나타낸 것 같다.  
 
 
 
