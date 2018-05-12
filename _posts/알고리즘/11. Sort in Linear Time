@@ -1,0 +1,43 @@
+---
+layout: posts
+title: 알고리즘 11. Sort in Linear Time 
+categories: 알고리즘
+tag : [computer_science, algorithm]
+use_math: true
+---
+
+## 1. Permutations
+&nbsp;&nbsp;&nbsp;Permutation은 한국어로 '순열' 이다. 이는 순서가 있는 어떤 집합을 다른 순서로 뒤섞는 연산이다.  
+```
+Permutation 예시 
+{a, b, c}의 permutation 
+(a, b, c), (a, c, b), (b, a, c), (b, c, a), (c, a, b), (c, b, a)
+```
+
+&nbsp;&nbsp;&nbsp;n element를 가지고 있는 모든 set S는 $$n!$$개의 permutation을 가지고 있다. 
+
+---
+
+## 2. Binary Trees
+&nbsp;&nbsp;&nbsp;Binary Tree는 각 노드가 최대 2개의 children을 가지고 있는 tree로 height가 h인 binary tree의 잎의 개수는 최대 $$2^h$$이다. 
+
+---
+
+## 3. Comparison-Based Sorting
+&nbsp;&nbsp;&nbsp;Comparison-Based Sorting 알고리즘은 input array에 대한 정보를 얻을 때 input item의 하나의 쌍을 비교함하는 것으로만 얻는다. 즉, $$a_i>a_j$$와 같이 return 값이 Yes or No인 test를 진행한다. 다음의 INSERTION SORT도 Comparison-Based Sorting이다. 
+```
+procedure InsertionSort(A[1....n])
+	for j <- 2, n do
+    	key <- A[j]
+        i <- j -1
+        while i > 0 and A[i] > key do \\ Compare!!!
+        	A[i+1] <- A[i]
+            i <- i + 1
+        A[i+1] <- key
+```
+
+&nbsp;&nbsp;&nbsp;Comparison-based sorting 알고리즘은 internal node가 모두 $$a_i > a_j$$이고 각 leaf는 겹치지 않게 하나의 permutation을 가지고 있는 decision tree로 볼 수 있다. 알고리즘이 제대로 돌아가기 위해서는 모든 permutation이 적어도 하나의 leaf에는 나와야 한다. (비교를 해야 하기 때문에)
+&nbsp;&nbsp;&nbsp;따라서 tree의 leaf 개수는 적어도 permutation의 숫자인 $$n!$$이며, height는 적어도 $$log({n!})$$이다. 이때 $$log({n!})=\Theta(n logn)$$이기 때문에 tree의 height는 $$\Theta(n logn)$$이다. 
+
+어떤 comparison-based sorting 알고리즘이든 worst case running time은 $$\Omega(n logn)$$이다. 
+&nbsp;&nbsp;&nbsp;
